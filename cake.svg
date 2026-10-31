@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" role="img" aria-labelledby="title">
+  <title id="title">奶油草莓生日蛋糕</title>
+  <defs>
+    <linearGradient id="cream" x2="0" y2="1"><stop stop-color="#fff9e8"/><stop offset=".48" stop-color="#f5d9ce"/><stop offset="1" stop-color="#d995a3"/></linearGradient>
+    <linearGradient id="sponge" x2="0" y2="1"><stop stop-color="#efbd99"/><stop offset="1" stop-color="#b6746f"/></linearGradient>
+    <linearGradient id="plate" x2="0" y2="1"><stop stop-color="#fff4db"/><stop offset="1" stop-color="#b7a8a0"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <ellipse cx="400" cy="282" rx="310" ry="18" fill="#171d1a" opacity=".44" filter="url(#shadow)"/>
+  <ellipse cx="400" cy="267" rx="345" ry="26" fill="url(#plate)" stroke="#fff8e7" stroke-width="4"/>
+  <path d="M105 120 Q400 143 695 120 L680 249 Q400 290 120 249Z" fill="url(#sponge)" stroke="#f6d8c6" stroke-width="4"/>
+  <path d="M105 120 Q400 151 695 120 L687 190 Q653 193 635 180 Q620 168 613 192 Q607 211 588 204 Q575 200 575 178 Q560 167 548 191 Q538 210 519 203 Q505 197 504 177 Q493 169 480 192 Q466 211 450 201 Q436 194 439 176 Q421 166 409 193 Q399 211 383 200 Q368 189 373 172 Q352 165 340 194 Q327 213 312 198 Q302 190 304 171 Q283 164 271 192 Q260 211 242 199 Q233 191 235 170 Q218 166 205 190 Q190 209 174 196 Q164 187 168 167 Q149 161 139 181 Q125 198 111 185Z" fill="url(#cream)"/>
+  <ellipse cx="400" cy="121" rx="296" ry="48" fill="#fff3df" stroke="#f5d4ce" stroke-width="5"/>
+  <ellipse cx="400" cy="122" rx="259" ry="28" fill="#f8e1ce" opacity=".5"/>
+  <path d="M126 226 Q400 274 674 226" fill="none" stroke="#fff2dd" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  <g fill="#cb5367" stroke="#ffddcf" stroke-width="3">
+    <path d="M155 112 Q169 80 186 115 Q175 142 155 112Z"/><path d="M246 91 Q260 60 278 96 Q269 122 246 91Z"/>
+    <path d="M350 77 Q366 48 382 83 Q373 110 350 77Z"/><path d="M454 78 Q468 49 487 84 Q474 112 454 78Z"/>
+    <path d="M557 91 Q572 59 590 96 Q578 123 557 91Z"/><path d="M649 112 Q665 80 682 115 Q670 142 649 112Z"/>
+  </g>
+  <g fill="#79935e"><path d="M164 95q8-15 15 0q-6 12-15 0Z"/><path d="M257 77q8-15 15 0q-6 12-15 0Z"/><path d="M361 63q8-15 15 0q-6 12-15 0Z"/><path d="M464 64q8-15 15 0q-6 12-15 0Z"/><path d="M568 77q8-15 15 0q-6 12-15 0Z"/><path d="M660 96q8-15 15 0q-6 12-15 0Z"/></g>
+  <g fill="#fff7e8" opacity=".8"><circle cx="201" cy="152" r="5"/><circle cx="294" cy="157" r="4"/><circle cx="411" cy="157" r="5"/><circle cx="517" cy="156" r="4"/><circle cx="605" cy="152" r="5"/></g>
+</svg>
