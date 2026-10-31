@@ -34,6 +34,23 @@ def compact_image(match):
 
 html = pattern.sub(compact_image, html)
 
+# Separate scene art from HTML so the browser can show the first screen quickly
+# and fetch later scenes as they are used.
+import base64
+scene_assets = {}
+
+
+def externalize_image(match):
+    encoded = match.group(1)
+    if encoded not in scene_assets:
+        name = f"scene-image-{len(scene_assets)}.webp"
+        (dist / name).write_bytes(base64.b64decode(encoded))
+        scene_assets[encoded] = name
+    return scene_assets[encoded]
+
+
+html = pattern.sub(externalize_image, html)
+
 for name in ("cake-real", "candle-real"):
     image = Image.open(dist / f"{name}.png")
     image.save(dist / f"{name}.webp", format="WEBP", quality=78, method=6)
@@ -50,9 +67,9 @@ html = html.replace("music.flac", "music.mp3")
 
 (dist / "index.html").write_text(html, encoding="utf-8")
 (root / "index.html").write_text(html, encoding="utf-8")
-for name in ("cake-real.webp", "candle-real.webp", "music.mp3"):
+for name in ("cake-real.webp", "candle-real.webp", "music.mp3", *scene_assets.values()):
     (root / name).write_bytes((dist / name).read_bytes())
 
 print("HTML:", len(html.encode()), "bytes")
-for name in ("cake-real.webp", "candle-real.webp", "music.mp3"):
+for name in ("cake-real.webp", "candle-real.webp", "music.mp3", *scene_assets.values()):
     print(name, (dist / name).stat().st_size, "bytes")
